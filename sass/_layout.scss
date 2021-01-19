@@ -10,7 +10,7 @@
     font-size: 1.4rem;
     height: 7rem;
     background-color: var(--color-white);
-    border-bottom: 1px solid var(--color-grey-light-2);
+    border-bottom: var(--border);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -30,8 +30,93 @@
     .hotel-view {
       flex: 1;
       background-color: var(--color-white);
-      /* Testing */
-      height: 80rem;
+
+      .detail {
+        display: flex;
+        padding: 4.5rem;
+        background-color: var(--color-grey-light-1);
+        border-bottom: var(--border);
+
+        .description {
+          background-color: var(--color-white);
+          box-shadow: var(--shadow-light);
+          padding: 3rem;
+          flex: 0 0 60%;
+          margin-right: 4.5rem;
+          font-size: 1.4rem;
+
+          .paragraph {
+            &:not(:last-of-type) {
+              margin-bottom: 2rem;
+            }
+          }
+
+          .list {
+            margin: 3rem 0;
+            list-style: none;
+            padding: 3rem 0;
+            border-top: var(--border);
+            border-bottom: var(--border);
+
+            display: flex;
+            flex-wrap: wrap;
+
+            .list-item {
+              flex: 0 0 50%;
+              margin-bottom: 0.7rem;
+
+              &:before {
+                content: '';
+                display: inline-block;
+                height: 1rem;
+                width: 1rem;
+                margin-right: 0.7rem;
+
+                // Newer browsers
+                background-color: var(--color-primary);
+                -webkit-mask-image: url('../img/chevron-thin-right.svg');
+                -webkit-mask-size: cover;
+                mask-image: url('../img/chevron-thin-right.svg');
+                mask-size: cover;
+
+                // Older browsers
+                /* background-image: url('../img/chevron-thin-right.svg');
+                background-size: cover; */
+              }
+            }
+          }
+
+          .recommend {
+            font-size: 1.3rem;
+            color: var(--color-grey-dark-3);
+
+            display: flex;
+            align-items: center;
+
+            .recommend-count {
+              margin-right: auto;
+            }
+
+            .recommend-friends {
+              .recommend-photo {
+                box-sizing: content-box;
+                height: 4rem;
+                width: 4rem;
+                border-radius: 50%;
+                border: 3px solid var(--color-white);
+                &:not(:last-child) {
+                  margin-right: -1.15rem;
+                }
+              }
+            }
+          }
+        }
+
+        .user-reviews {
+          background-color: yellowgreen;
+          flex: 1;
+        }
+      }
     }
   }
 }

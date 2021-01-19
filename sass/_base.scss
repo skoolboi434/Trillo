@@ -25,7 +25,9 @@
 
   --color-white: #ffffff;
 
+  --shadow-light: 0 2rem 5rem rgba(0, 0, 0, 0.06);
   --shadow-dark: 0 2rem 6rem rgba(0, 0, 0, 0.3);
+  --border: 1px solid var(--color-grey-light-2);
 }
 
 html {
